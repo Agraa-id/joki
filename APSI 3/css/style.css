@@ -1,0 +1,255 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Pastikan html dan body memiliki tinggi penuh */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Tinggi minimal 100% dari viewport */
+}
+
+main {
+    flex: 1; /* Konten utama akan mengisi ruang yang tersisa */
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url('../img/background-pattern.jpg'); /* Tambahkan gambar pattern */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Background tetap di tempat saat di-scroll */
+    color: #333;
+}
+
+header {
+    background: linear-gradient(to right, #ff99cc, #ff6699);
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 10; /* Pastikan header memiliki z-index lebih tinggi */
+}
+
+header h1 {
+    font-family: 'Poppins', sans-serif; /* Menggunakan font Poppins */
+    font-size: 36px; /* Ukuran font lebih besar */
+    color: #fff; /* Warna teks putih */
+    text-transform: uppercase; /* Huruf kapital untuk judul */
+    letter-spacing: 2px; /* Spasi antar huruf */
+}
+
+header nav {
+    margin-top: 10px;
+}
+
+header nav a {
+    margin: 0 20px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 100px 20px;
+    background-image: url('../img/hero-bg.jpg'); /* Tambahkan gambar background di hero */
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Tambahkan shadow untuk teks agar lebih terbaca */
+}
+
+.cta {
+    background-color: #ff6699;
+    color: white;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    margin-top: 20px;
+    transition: all 0.3s ease;
+    animation: fadeInUp 1.5s ease-in-out; /* Tambahkan animasi fade-in pada tombol */
+}
+
+.cta:hover {
+    background-color: #ff3366;
+    transform: translateY(-2px); /* Sedikit naik saat hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Efek bayangan lebih besar saat hover */
+}
+
+.login-form, .register-form, .event-detail {
+    text-align: center;
+    padding: 50px;
+    background-color: #ffccdd;
+}
+
+input {
+    margin: 10px;
+    padding: 10px;
+    width: 80%;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #ff6699;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ff3366;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(to right, #ff99cc, #ff6699);
+    color: white;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background-image: url('../img/concert-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+.cta {
+    background-color: #ff6699;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.cta:hover {
+    background-color: #ff3366;
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+}
+
+.event-section {
+    padding: 50px;
+    background-color: #ffccdd;
+    text-align: center;
+}
+
+.event-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.event-card {
+    background-color: #ffe6f0;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    text-align: center;
+}
+
+.event-card h3 {
+    margin-bottom: 10px;
+}
+
+.event-card p {
+    margin-bottom: 15px;
+    color: #666;
+}
+
+header nav a:hover {
+    color: #ffd1e1; /* Warna teks berubah saat di-hover */
+}
+
+header nav a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 3px;
+    background: #ffd1e1; /* Warna underline */
+    transition: width 0.3s; /* Animasi underline saat di-hover */
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+}
+
+header nav a:hover::after {
+    width: 100%; /* Underline muncul penuh saat di-hover */
+}
+
+button:hover {
+    background-color: #ff3366;
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+}
+
+.hero h2, .hero p {
+    animation: fadeInDown 1.5s ease-in-out; /* Tambahkan animasi untuk teks */
+}
+
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.upcoming-events {
+    background-color: #fff;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.event-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.event-card {
+    background-color: #ffe6f0;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+}
+
+
